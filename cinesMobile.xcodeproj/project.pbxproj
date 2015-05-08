@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1EE13EF581F41431E406208C /* libPods-cinesMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 299DE91928723E863112471A /* libPods-cinesMobile.a */; };
 		6E8F08971AFD1EB200F2770A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8F08961AFD1EB200F2770A /* main.m */; };
 		6E8F089A1AFD1EB200F2770A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8F08991AFD1EB200F2770A /* AppDelegate.m */; };
 		6E8F089D1AFD1EB200F2770A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8F089C1AFD1EB200F2770A /* ViewController.m */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		299DE91928723E863112471A /* libPods-cinesMobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cinesMobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E8F08911AFD1EB200F2770A /* cinesMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cinesMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E8F08951AFD1EB200F2770A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E8F08961AFD1EB200F2770A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -43,6 +45,8 @@
 		6E8F08B01AFD1EB200F2770A /* cinesMobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cinesMobileTests.m; sourceTree = "<group>"; };
 		6E8F08BA1AFD1EC800F2770A /* ECMFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMFormatter.h; sourceTree = "<group>"; };
 		6E8F08BB1AFD1EC800F2770A /* ECMFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMFormatter.m; sourceTree = "<group>"; };
+		E1F48EA29331D64F88E1DF5F /* Pods-cinesMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cinesMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-cinesMobile/Pods-cinesMobile.release.xcconfig"; sourceTree = "<group>"; };
+		F417CFEC4AE93EECA1B6062C /* Pods-cinesMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cinesMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cinesMobile/Pods-cinesMobile.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EE13EF581F41431E406208C /* libPods-cinesMobile.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,12 +68,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		156AD3C357B6CCFA55DFAC84 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F417CFEC4AE93EECA1B6062C /* Pods-cinesMobile.debug.xcconfig */,
+				E1F48EA29331D64F88E1DF5F /* Pods-cinesMobile.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6E8F08881AFD1EB200F2770A = {
 			isa = PBXGroup;
 			children = (
 				6E8F08931AFD1EB200F2770A /* cinesMobile */,
 				6E8F08AD1AFD1EB200F2770A /* cinesMobileTests */,
 				6E8F08921AFD1EB200F2770A /* Products */,
+				156AD3C357B6CCFA55DFAC84 /* Pods */,
+				779033A06CBA86D736531441 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +140,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		779033A06CBA86D736531441 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				299DE91928723E863112471A /* libPods-cinesMobile.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,9 +155,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E8F08B41AFD1EB200F2770A /* Build configuration list for PBXNativeTarget "cinesMobile" */;
 			buildPhases = (
+				91C0D52CA964F80FCB8F6EF9 /* Check Pods Manifest.lock */,
 				6E8F088D1AFD1EB200F2770A /* Sources */,
 				6E8F088E1AFD1EB200F2770A /* Frameworks */,
 				6E8F088F1AFD1EB200F2770A /* Resources */,
+				B88EA48FD996381D1F56529D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -218,6 +244,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		91C0D52CA964F80FCB8F6EF9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B88EA48FD996381D1F56529D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-cinesMobile/Pods-cinesMobile-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6E8F088D1AFD1EB200F2770A /* Sources */ = {
@@ -351,6 +410,7 @@
 		};
 		6E8F08B51AFD1EB200F2770A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F417CFEC4AE93EECA1B6062C /* Pods-cinesMobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
@@ -363,6 +423,7 @@
 		};
 		6E8F08B61AFD1EB200F2770A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1F48EA29331D64F88E1DF5F /* Pods-cinesMobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = cinesMobile/Info.plist;

@@ -29,7 +29,7 @@ platform :ios do
 
     # ipa
 
-    xctool '-workspace cinesMobile.xcworkspace -scheme cinesMobile -sdk iphoneos build'
+    xctool '-workspace cinesMobile.xcworkspace -scheme cinesMobile -sdk iphoneos clean build ONLY_ACTIVE_ARCH=NO'
   end
 
   desc "Prueba"
@@ -38,11 +38,11 @@ platform :ios do
 
   desc "Runs all the tests"
   lane :test do
-    xctool '-workspace cinesMobile.xcworkspace -scheme cinesMobile -sdk iphonesimulator test OBJCROOT=./build'
+    xctool '-workspace cinesMobile.xcworkspace -scheme cinesMobile -sdk iphonesimulator clean test ONLY_ACTIVE_ARCH=NO OBJROOT=./build'
   
     # snapshot
     # sh "cd .. && oclint-json-compilation-database -e Pods -e cinesMobileTests ; exit 0"
-    # sh "cd .. && gcovr --root . --object-directory build/cinesMobile.build/Debug-iphonesimulator/cinesMobile.build/Objects-normal/i386 --exclude '.*Tests.*' --xml > coverage.xml"
+    sh "cd .. && gcovr --root . --object-directory build/cinesMobile.build/Debug-iphonesimulator/cinesMobile.build/Objects-normal/i386 --exclude '.*Tests.*' --xml > coverage.xml"
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"
